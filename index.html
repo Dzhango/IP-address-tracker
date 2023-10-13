@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Rubik" as="font" type="font/woff2" crossorigin>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | IP Address Tracker</title>
+    <title>Frontend Mentor | IP Address Tracker</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-
-  IP Address Tracker
-
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <main>
+        <div class="background-hero">
+            <input-container>
+                <label for="ip-input" class="font-color-white font-size-lg">IP Address Tracker</label>
+                <div class="input-wrapper">
+                    <input type="text" name="ip-input" id="ip-input" placeholder="Search for any IP address or domain">
+                    <button id="submit"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button>
+                </div>
+            </input-container>
+        </div>
+        <output-container>
+            <output-item>
+                <p class="name">IP ADDRESS</p>
+                <p class="result weight-em font-size-md">69.196.40.240</p>
+            </output-item>
+            <output-item>
+                <p class="name">LOCATION</p>
+                <p class="result weight-em font-size-md">Brooklyn, NY 10001</p>
+            </output-item>
+            <output-item>
+                <p class="name">TIMEZONE</p>
+                <p class="result weight-em font-size-md">UTC -05:00</p>
+            </output-item>
+            <output-item class="border-none">
+                <p class="name">ISP</p>
+                <p class="result weight-em font-size-md">SpaceX Starlink</p>
+            </output-item>
+        </output-container>
+        <ouput-map id="map">
+        </ouput-map>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Dzhangir Bayandarov</a>.
+        </div>
+    </main>
 </body>
+
 </html>

@@ -1,0 +1,306 @@
+/* 
+
+TAC CSS, https://jordanbrennan.hashnode.dev/tac-a-new-css-methodology
+0. Global
+1. Tags
+2. Attributes
+3. Classes
+
+/* CSS Reset */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+
+
+/* GLOBAL STYLES */
+
+@font-face {
+    font-family: "Rubik";
+    src: url("./font/Rubik-VariableFont_wght.ttf") format("woff2");
+}
+
+body {
+    font-family: 'Rubik';
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: azure;
+}
+
+
+/* TAGS */
+
+.background-hero {
+    display: flex;
+    justify-content: center;
+    background-image: url(./images/pattern-bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding-top: 2rem;
+}
+
+input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#ip-input {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    outline: transparent;
+    border: none;
+    width: 30rem;
+}
+
+#submit {
+    position: relative;
+    right: 0.75rem;
+    padding: 1rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    border: none;
+    background-color: black;
+    font-size: 1rem;
+    color: white;
+    width: 3rem;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: rgb(79, 78, 78);
+}
+
+#submit:active {
+    background-color: black;
+    transform: translateY(1px);
+}
+
+output-container {
+    position: relative;
+    top: -5rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 2rem;
+    max-width: 61.6rem;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+output-item {
+    flex: 1 0 0px;
+    border-right: 1px solid hsl(0, 1%, 76%);
+}
+
+.name {
+    font-size: 0.75rem;
+    color: hsl(0, 0%, 59%);
+    margin-bottom: 1rem;
+}
+
+
+/* Attributes */
+
+
+/* Classes */
+
+.dark-gray-em {
+    color: hsl(0, 0%, 17%);
+}
+
+.dark-gray {
+    color: hsl(0, 0%, 59%);
+}
+
+.weight-reg {
+    font-weight: 400;
+}
+
+.weight-em {
+    font-weight: 500;
+}
+
+.weight-bold {
+    font-weight: 700;
+}
+
+.font-size-md {
+    font-size: 1.5rem;
+}
+
+.font-size-lg {
+    font-size: 2rem;
+}
+
+.font-color-white {
+    color: white;
+}
+
+.border-none {
+    border: none;
+}
+
+@media (max-width: 760px) {
+    .background-hero {
+        background-image: url(./images/pattern-bg-mobile.png);
+    }
+    #ip-input {
+        width: 18rem;
+    }
+    output-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    output-item {
+        text-align: center;
+        border: none;
+    }
+}
