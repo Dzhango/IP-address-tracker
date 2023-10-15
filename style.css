@@ -167,7 +167,6 @@ body {
 main {
     max-width: 1440px;
     margin: 0 auto;
-    background-color: azure;
 }
 
 
@@ -179,7 +178,7 @@ main {
     background-image: url(./images/pattern-bg-desktop.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: 250px;
     padding-top: 2rem;
 }
 
@@ -202,7 +201,7 @@ input-container {
 
 #submit {
     position: relative;
-    right: 0.75rem;
+    right: 1.5rem;
     padding: 1rem;
     border-radius: 0 0.75rem 0.75rem 0;
     border: none;
@@ -219,7 +218,14 @@ input-container {
 
 #submit:active {
     background-color: black;
-    transform: translateY(1px);
+    transform: translateX(1px);
+}
+
+#map {
+    display: block;
+    height: 30rem;
+    top: -10rem;
+    z-index: 0;
 }
 
 output-container {
@@ -229,14 +235,16 @@ output-container {
     justify-content: center;
     padding: 2rem;
     background-color: white;
-    border-radius: 2rem;
+    border-radius: 1rem;
     max-width: 61.6rem;
     margin: 0 auto;
     gap: 2rem;
+    z-index: 1;
 }
 
 output-item {
     flex: 1 0 0px;
+    padding-right: 0.5rem;
     border-right: 1px solid hsl(0, 1%, 76%);
 }
 
@@ -293,7 +301,7 @@ output-item {
         background-image: url(./images/pattern-bg-mobile.png);
     }
     #ip-input {
-        width: 18rem;
+        width: 15rem;
     }
     output-container {
         flex-direction: column;
