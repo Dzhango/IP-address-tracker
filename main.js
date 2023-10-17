@@ -14,17 +14,17 @@ function initIpSearch() {
     const submitBtn = document.querySelector("#submit");
     submitBtn.addEventListener('click', (e) => {
         fetchIPMap(inputIP.value);
-        fetchIpData(inputIP.value);
+        fetchIPData(inputIP.value);
     });
     window.addEventListener('keyup', (e) => {
         if (e.keyCode === 13) {
             fetchIPMap(inputIP.value);
-            fetchIpData(inputIP.value);
+            fetchIPData(inputIP.value);
         }
     });
     // check is API flag for client's IP
     fetchIPMap("check");
-    fetchIpData("");
+    fetchIPData("");
 
 }
 
@@ -57,8 +57,8 @@ async function fetchIPMap(ip) {
     }
 }
 
-async function fetchIpData(ip) {
-    const url = `https://geo.ipify.org/api/v2/country?apiKey=at_Pje4dhNLiddNfP5Cr2rZpaHVbRvEz&ipAddress=${ip}`;
+async function fetchIPData(ip, domain) {
+    const url = `https://geo.ipify.org/api/v2/country?apiKey=at_Pje4dhNLiddNfP5Cr2rZpaHVbRvEz&ipAddress=${ip}&domain=${ip}`;
     const response = await fetch(url);
     const json = await response.json();
     if (response.status === 200) {
