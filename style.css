@@ -223,8 +223,8 @@ input-container {
 
 #map {
     display: block;
-    height: 30rem;
-    top: -10rem;
+    height: 40rem;
+    top: -13rem;
     z-index: 0;
 }
 
