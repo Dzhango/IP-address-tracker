@@ -178,7 +178,7 @@ main {
     background-image: url(./images/pattern-bg-desktop.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 250px;
+    min-height: 250px;
     padding-top: 2rem;
 }
 
